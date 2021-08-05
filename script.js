@@ -109,3 +109,32 @@ export default class PersonList extends React.Component {
   }
 }
 
+
+
+//question 5
+
+//A JavaScript Promise object contains both the producing code and calls to the consuming code
+
+//common promise syntax: 
+let myPromise = new Promise(function(myResolve, myReject) {
+    // "Producing Code" (May take some time)
+    
+      myResolve(); // when successful
+      myReject();  // when error
+    });
+    
+    // "Consuming Code" (Must wait for a fulfilled Promise)
+    myPromise.then(
+      function(value) { /* code if successful */ },
+      function(error) { /* code if some error */ }
+    );
+
+    /**Promises are the ideal choice for handling asynchronous operations in the simplest manner. 
+     * They can handle multiple asynchronous operations easily and provide better error handling than callbacks and events. 
+     * 
+     * Benefits of Promises
+            Improves Code Readability
+            Better handling of asynchronous operations
+            Better flow of control definition in asynchronous logic
+            Better Error Handling
+*/
