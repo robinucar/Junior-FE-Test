@@ -138,3 +138,12 @@ let myPromise = new Promise(function(myResolve, myReject) {
             Better flow of control definition in asynchronous logic
             Better Error Handling
 */
+
+
+question 6
+
+/*
+  The layout wouldn't display anything as the flex items do not have a height. 
+  If they did have one, or if container had a specified height, the colored elements would be on the same line & the width would be spread among them with yellow taking up twice 
+  as much horizontal space, given its flex:2 property which would make the basic common width division one quarter of the container's width, 
+  and have the yellow one occupy two quarters, as a half of the screen */
