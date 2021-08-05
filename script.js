@@ -21,3 +21,16 @@ console.log(testArray);
  * 1: 2
  * 2: 3
  */
+
+const numberChecker = (num) => {
+  //if statement (first way)
+  /*if (num < 10) {
+    return false;
+  } else {
+    return true;
+  }*/
+
+  //ternary operator (second and short way -ecmascript6)
+  return num < 10 ? false : true;
+};
+console.log(numberChecker(10));
