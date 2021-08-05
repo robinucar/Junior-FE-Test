@@ -1,3 +1,6 @@
+//LEVEL1 TEST
+
+//question one
 const testArray = [
   {
     name: 'John',
@@ -22,6 +25,7 @@ console.log(testArray);
  * 2: 3
  */
 
+//question2
 const numberChecker = (num) => {
   //if statement (first way)
   /*if (num < 10) {
@@ -34,3 +38,29 @@ const numberChecker = (num) => {
   return num < 10 ? false : true;
 };
 console.log(numberChecker(10));
+
+//question3;
+class TestComponent extends Component {
+    render() {
+      return (
+        
+      );
+    }
+  }
+  
+  export default TestComponent;
+
+//&
+
+const TestComponent = () => (
+  
+    );
+    
+    export default TestComponent;
+
+/**
+ * First component is class base component. Second component is functional component. Before React hooks
+ * we were using functional components for only stateless components. If a component has state we were using class base components
+ * however since hooks was introduced by react we were using functional components for either stateless or stateful components
+ *
+ */
