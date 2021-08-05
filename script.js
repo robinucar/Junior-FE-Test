@@ -64,3 +64,48 @@ const TestComponent = () => (
  * however since hooks was introduced by react we were using functional components for either stateless or stateful components
  *
  */
+
+
+
+//question4
+
+
+
+//get request with react. firstly i installed axios.
+// Axios is promise-based, which gives you the ability to take advantage of JavaScript’s async and await for more readable asynchronous code.
+//then I created state object which has persons empty array.
+//and then inside componentDidMount lifecycle method i send get request to api. 
+//then i created a persons variable and equalize to response data. 
+// then i pushed persons inside the state.
+//in the end i used data inside jsx.
+
+
+//important:  in the functional components we use useEffect hooks instead of componentDidMount. And Also we use useState Hooks to define our states. 
+
+///classbase component
+import React from 'react';
+
+import axios from 'axios';
+
+export default class PersonList extends React.Component {
+  state = {
+    persons: []
+  }
+
+  componentDidMount() {
+    axios.get(`https://jsonplaceholder.typicode.com/users`)
+      .then(res => {
+        const persons = res.data;
+        this.setState({ persons });
+      })
+  }
+
+  render() {
+    return (
+      <ul>
+        { this.state.persons.map(person => <li>{person.name}</li>)}
+      </ul>
+    )
+  }
+}
+
